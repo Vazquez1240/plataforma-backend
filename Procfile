@@ -1,1 +1,1 @@
-web: gunicorn plataforma.wsgi
+web: python manage.py collectstatic && gunicorn plataforma.wsgi
