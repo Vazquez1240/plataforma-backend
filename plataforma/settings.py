@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-!g2=4q%*zq4vrqr-2y#rpu95=*9a$+xxx%l%hqd43^r=70^e+h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['web-production-a333.up.railway.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'alumnos',
     'clases',
+    'profesores',
     'rest_framework.authtoken',
 ]
 
@@ -81,11 +82,16 @@ WSGI_APPLICATION = "plataforma.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'PLATAFORMA',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation

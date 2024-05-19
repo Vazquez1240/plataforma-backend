@@ -14,7 +14,7 @@ class Alumno(models.Model):
     primer_apellido = models.CharField(max_length=100)
     segundo_apellido = models.CharField(max_length=100)
     sexo = models.CharField(max_length=1)
-    fecha_nacimiento = models.CharField(max_length=15)
+    fecha_nacimiento = models.DateField(max_length=15)
     edad = models.IntegerField()
     curp = models.CharField(max_length=18, unique=True)
     descripcion = models.CharField(max_length=400)
